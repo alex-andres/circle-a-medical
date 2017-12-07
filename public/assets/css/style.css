@@ -1,0 +1,20 @@
+
+body{
+	background-color: #27758E;
+}
+#main_container{
+	margin-top: 40px;
+}
+#row1,#row2,#row3{
+	text-align: center;
+}
+#row2,#row3{
+	color: white;
+}
+
+#row4{
+	margin-top: 30px;
+}
+.lables{
+	color: white;
+}
