@@ -1,0 +1,24 @@
+{
+  "name": "backend-product-management",
+  "version": "1.0.0",
+  "description": "A node data processing/conversion app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/Erfaanism/backend-product-management.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/Erfaanism/backend-product-management/issues"
+  },
+  "homepage": "https://gitlab.com/Erfaanism/backend-product-management#README",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  }
+}
