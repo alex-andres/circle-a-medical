@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> be18b3f19ac9a8111a383576749475f87d229388
 # Logs
 logs
 *.log
@@ -107,4 +111,9 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
 .idea
+
+
+
+
