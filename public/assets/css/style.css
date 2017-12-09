@@ -58,27 +58,28 @@ html, body {
 .nav-item {
     color: #ffffff
 }
-#setting_title{
+#setting_title,#spread_title{
     color: grey;
     border-bottom: 1px solid #e8e2e1;
     padding-bottom: 8px;
 }
-#setting_sub{
+#setting_sub,#spread_sub{
     color: darkgrey;
 
 }
-#setting_login-container{
+#setting_login-container,#spreadsheets-container{
     padding-top: 35px;
 }
 #setting_login-container .lables{
     color: grey;
 }
-#setting-submit{
-   
-}
+
 #setting_row1{
     margin-top: 30px;
 }
 #buttonHoler{
     text-align: center;
+}
+#spreadsheets-container .lables{
+    color: grey;
 }
