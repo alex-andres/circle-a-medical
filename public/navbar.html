@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Navbar</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.3/themes/default/style.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark pb-0 pt-0">
+        <a class="navbar-brand pl-5 pr-5" href=" # ">
+            <img src="./assets/img/CircleA.png " alt="Circle A Logo" height="45" width="45">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ml-4 mr-4">
+                    <a class="nav-link" href="# ">Home</a>
+                </li>
+                <li class="nav-item ml-4 mr-4">
+                    <a class="nav-link" href="# ">Items/Inventory</a>
+                </li>
+                <li class="nav-item ml-4 mr-4">
+                    <a class="nav-link" href="# ">Spreadsheet</a>
+                </li>
+                <li class="nav-item ml-4 mr-4">
+                    <a class="nav-link" href="# ">Settings</a>
+                </li>
+                <li class="nav-item ml-4 mr-4">
+                    <a class="nav-link " href="# ">Log Out</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-11">
+                <div class="mt-5">
+                    <h3>Items/Inventory</h3>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-3">
+                        <h5>Process Vendor Items</h5>
+                    </div>
+                    <div class="col">
+                        <div>
+                            <form class="form-inline">
+                                <label class="mr-sm-2" for="inlineFormInputQuery">Search</label>
+                                <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInputQuery" placeholder="manufacturer # or SKU">
+
+                                <label class="mr-sm-2" for="inlineFormCustomSelect">by</label>
+                                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                                    <option selected>Choose...</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row p-3">
+                    <div class="col-3 border">
+                        <span>Categories</span>
+                        <div id="jstree"></div>
+                    </div>
+                    <div class="col-9">
+                        <h5> Manufacturer</h5>
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Loaded</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Empty</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.3/jstree.min.js"></script>
+    <script src='./assets/js/tree.js'></script>
+</body>
+
+</html>
