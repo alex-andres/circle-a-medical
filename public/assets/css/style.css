@@ -19,13 +19,13 @@ html, body {
 #row4{
     margin-top: 30px;
 }
-.lables{
+#login_main_container .lables{
     color: white;
 }
 #row3 h2 {
     margin-top: 3px;
 }
-#loginSubmit{
+#loginSubmit,#setting-submit{
     color: white;
     background-color: #27758E;
     border-color: white;
@@ -58,4 +58,27 @@ html, body {
 .nav-item {
     color: #ffffff
 }
+#setting_title{
+    color: grey;
+    border-bottom: 1px solid #e8e2e1;
+    padding-bottom: 8px;
+}
+#setting_sub{
+    color: darkgrey;
 
+}
+#setting_login-container{
+    padding-top: 35px;
+}
+#setting_login-container .lables{
+    color: grey;
+}
+#setting-submit{
+   
+}
+#setting_row1{
+    margin-top: 30px;
+}
+#buttonHoler{
+    text-align: center;
+}
