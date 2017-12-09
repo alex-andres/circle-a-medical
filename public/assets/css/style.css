@@ -50,3 +50,12 @@ html, body {
     color: #007299;
     box-shadow: none;
 }
+
+.navbar {
+    background-color: #27758E;
+}
+
+.nav-item {
+    color: #ffffff
+}
+
