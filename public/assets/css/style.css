@@ -119,3 +119,10 @@ html, body {
 #search_inventory{
     padding-top: 10px;
 }
+.file {
+  visibility: hidden;
+  position: absolute;
+}
+#inventory_brows{
+    padding-top: 32px;
+}
