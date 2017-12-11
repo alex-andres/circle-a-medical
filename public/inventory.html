@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Spreadsheets</title>
+  <title>Items/Inventory</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -46,23 +46,71 @@
 
         <div class="row">
            <div class="col-lg-12 col-md-12 col-sm-12">
-                <h3 id="spread_title">Spreadsheets</h3>
-           </div>
-           <div>
-               <div class="col-lg-12 col-md-12 col-sm-12">
-                   <h4 id="spread_sub">Import/Export spreadsheets</h4>
-               </div>
-           </div>
+                <h3 id="spread_title">Items/Inventory</h3>   
+           </div>    
         </div>
-        <div class="row" id="spread_row1">
-            <div class="col-lg-12 col-md-12">
-                <div class="text-center" id="file_uploader">
-                    <h5>Choose any Microsoft Excel (.xlsx) file to import:</h5>
-                    <input type="file" name="excel_import">
-                </div>
-            </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <h4 id="inventory_sub">Process vendor itemss.</h4>
+           
             
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8">
+                   <form class="form-inline">
+                      
+                        <div class="form-group mx-sm-3">
+                            <label for="searchKeyTerm" class="search_lables">Search</label>
+                            <input type="input" class="form-control" id="searchKeyTerm" placeholder="Manufacturer # or SKU">
+                        </div>
+                      <div class="form-group mx-sm-3">
+                          <label for="search_by" class="search_lables">by:</label>
+                          <select class="form-control" id="search_by">
+                            <option></option>
+                          </select>
+                      </div>
+                    </form>
+            </div>
         </div>
+        <div class="row" id="inventory_row1">
+            <div class="col-lg-3 col-md-3" style="height: 500px; background-color: #e4e3e2;"> </div>
+            <div class="col-lg-1 col-md-1"></div>
+            <div class="col-lg-8 col-md-8" style="height: 500px;">
+
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#home">Manufacturer Information</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#menu1">Product Information</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#menu2">Units</a>
+                </li>
+              </ul>
+
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div id="home" class="container tab-pane active"><br>
+                  <h3>HOME</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div id="menu1" class="container tab-pane fade"><br>
+                  <h3>Menu 1</h3>
+                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div id="menu2" class="container tab-pane fade"><br>
+                  <h3>Menu 2</h3>
+                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                </div>
+              </div>
+
+
+            </div>
+
+        </div>
+            
+    </div>
 
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>

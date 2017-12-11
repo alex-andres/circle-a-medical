@@ -83,3 +83,21 @@ html, body {
 #spreadsheets-container .lables{
     color: grey;
 }
+#inventory_container{
+    padding-top: 35px;
+}
+#inventory_row1{
+    padding-top: 60px;
+}
+#inventory_sub{
+    color: darkgrey;
+}
+.search_lables{
+    margin-right: 10px;
+    color: darkgrey;
+    font-weight: bold;
+}
+
+#file_uploader{
+    padding-top: 50px;
+}
