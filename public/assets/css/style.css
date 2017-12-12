@@ -1,0 +1,136 @@
+
+html, body {
+    height:100%;
+
+}
+#login_main_container{
+    padding-top: 40px;
+    background-color: #27758E;
+    height: 100%;
+}
+#row1,#row2,#row3{
+    text-align: center;
+}
+#row2 h2,#row3 h2{
+    color: white;
+    font-weight: bolder;
+}
+
+#row4{
+    margin-top: 30px;
+}
+#login_main_container .lables{
+    color: white;
+}
+#row3 h2 {
+    margin-top: 3px;
+}
+#loginSubmit,#setting-submit{
+    color: white;
+    background-color: #27758E;
+    border-color: white;
+    margin-top: 10px;    
+}
+
+.btn.outline {
+    background: none;
+    padding: 12px 22px;
+}
+.btn-primary.outline {
+    border: 2px solid #0099cc;
+    color: #0099cc;
+}
+
+.btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
+    color: #33a6cc;
+    border-color: #33a6cc;
+}
+.btn-primary.outline:active, .btn-primary.outline.active {
+    border-color: #007299;
+    color: #007299;
+    box-shadow: none;
+}
+
+.navbar {
+    background-color: #27758E;
+}
+
+.nav-item {
+    color: #ffffff
+}
+#setting_title,#spread_title{
+    color: grey;
+    border-bottom: 1px solid #e8e2e1;
+    padding-bottom: 8px;
+}
+#setting_sub,#spread_sub{
+    color: darkgrey;
+
+}
+#setting_login-container,#spreadsheets-container{
+    padding-top: 35px;
+}
+#setting_login-container .lables{
+    color: grey;
+}
+
+#setting_row1{
+    margin-top: 30px;
+}
+#buttonHoler{
+    text-align: center;
+}
+#spreadsheets-container .lables{
+    color: grey;
+}
+#inventory_container{
+    padding-top: 35px;
+}
+#inventory_row1{
+    padding-top: 60px;
+}
+#inventory_sub{
+    color: darkgrey;
+    padding-top: 5px;
+}
+.search_lables{
+    margin-right: 10px;
+    color: darkgrey;
+    font-weight: bold;
+}
+
+#file_uploader{
+    padding-top: 50px;
+}
+.inventory_tab{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.inventory_tab_list{
+    background-color: lightgrey;
+    margin-right: 15px;
+}
+.inventory_tab_list a{
+    color: white;
+    font-weight: bold;
+}
+#search_inventory{
+    padding-top: 10px;
+}
+.file {
+  visibility: hidden;
+  position: absolute;
+}
+#inventory_brows{
+    padding-top: 32px;
+}
+#categories_tree{
+    color: grey;
+    font-size: 150%;
+    padding-bottom: 20px;
+}
+#inventory_category_section{
+    border: 1px solid #dcdee0;
+}
