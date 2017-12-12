@@ -126,3 +126,11 @@ html, body {
 #inventory_brows{
     padding-top: 32px;
 }
+#categories_tree{
+    color: grey;
+    font-size: 150%;
+    padding-bottom: 20px;
+}
+#inventory_category_section{
+    border: 1px solid #dcdee0;
+}
