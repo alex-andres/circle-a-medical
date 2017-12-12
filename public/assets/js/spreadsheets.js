@@ -15,7 +15,6 @@ $(function() {
             processData: false,
             contentType: false,
             success: function(res) {
-                console.log(res);
                 $('#statusCode').html(`Status Code: ${res.statusCode}`);
                 $('#message').html(`Message: ${res.message}`);
                 $('#outputModal').modal('show');
