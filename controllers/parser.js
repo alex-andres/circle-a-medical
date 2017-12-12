@@ -63,7 +63,7 @@ let parseExcel = (xlsxFile, res) => {
         product.product(jsonSheet);
 
         // send the json as response
-        res.status(200).json({ statusCode: 200('OK'), message: `Number of items: ${jsonSheet.length}` });
+        res.status(200).json({ statusCode: '200(OK)', message: `Number of items: ${jsonSheet.length}` });
 
     });
 };
@@ -75,12 +75,12 @@ let uploadExcel = (req, res) => {
 
         // error handling
         if (err) {
-            return (res.json({ statusCode: req.fileValidationCode || 400('Bad Request'), message: req.fileValidationError || JSON.stringify(err, undefined, 2) }));
+            return (res.json({ statusCode: req.fileValidationCode || '400(Bad Request)', message: req.fileValidationError || JSON.stringify(err, undefined, 2) }));
         };
 
         // send error if no file was selected
         if (!req.file) {
-            return (res.json({ statusCode: 415('Unsupported Media Type'), message: 'No file passed' }));
+            return (res.json({ statusCode: '415(Unsupported Media Type)', message: 'No file passed' }));
         };
 
         parseExcel(req.file.path, res);
