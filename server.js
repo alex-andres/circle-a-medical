@@ -3,11 +3,21 @@ const bodyParser = require('body-parser');
 const port = process.env.PORT || 3000;
 const app = express();
 const routes = require('./controllers/back-end-controller.js');
+var passport = require("./config/passport");
+var session = require('express-session')
+var config = require("./config/extra-config");
 
 
+
+var isAuth = require("./config/middleware/isAuthenticated");
+var authCheck = require('./config/middleware/attachAuthenticationStatus');
 //Use the public folder for static files
 //app.use(express.static("public"));
 app.use('/', routes);
+app.use(session({ secret: config.sessionKey, resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(authCheck);
 
 
 app.listen(port, function(){
