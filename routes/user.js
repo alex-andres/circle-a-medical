@@ -13,7 +13,11 @@ router.get('/', function(req, res) {
     // res.render('login.html')
 })
 
-// router.post('/login', passport.authenticate("local"), users_controller.loginUser);
+router.post('/login', passport.authenticate("local"), users_controller.loginUser);
+
+// router.post('/login', function(req, res) {
+//     console.log('hi')
+// });
 
 // router.post('/signup', users_controller.signUpUser);
 

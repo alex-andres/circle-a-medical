@@ -9,7 +9,10 @@ passport.use(new LocalStrategy(
     usernameField: "username",
     passwordField : 'password'
   },
+  
   function(username, password, done) {
+    console.log('hi')
+    
     User.findOne({ 'username' :  username }, function(err, user) {
       // if there are any errors, return the error before anything else
       if (err)
