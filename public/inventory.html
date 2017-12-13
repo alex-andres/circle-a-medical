@@ -190,21 +190,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.3/jstree.min.js"></script>
     <script src='./assets/js/categories_tree.js'></script>
-    <script type="text/javascript">
-        //$(document).ready(function(){
-        //$("#two .active").parent().css("background-color","blue");
-        //});
-        $(document).on('click', '.browse', function() {
-            var file = $(this).parent().parent().parent().find('.file');
-            file.trigger('click');
-        });
-        $(document).on('change', '.file', function() {
-            $(this).parent().find('.form-control').val($(this).val().replace(/C:\\fakepath\\/i, ''));
-        });
-    </script>
-
-
-
+    <script src='./assets/js/browser.js'></script>
 </body>
 
 </html>
