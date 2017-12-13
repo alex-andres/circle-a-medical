@@ -114,6 +114,9 @@ Temporary Items
 
 .idea
 
+uploads/*.json
+uploads/*.xlsx
+
 
 
 
