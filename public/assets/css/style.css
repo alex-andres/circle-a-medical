@@ -133,6 +133,7 @@ html, body {
 }
 #inventory_category_section{
     border: 1px solid #dcdee0;
+    height: 540px;
 }
 #manufactureres_title{
     color: grey;
