@@ -40,6 +40,18 @@ const upload = multer({
 
 // ----- multer setting end -----
 
+// function to remove fields with empty strings as value
+let jsonCleaner = data => {
+    data.map(obj => {
+        const objEnt = Object.entries(obj);
+        objEnt.map(val => {
+            if (val[1] === '' || val[1] === ' ') {
+                delete obj[val[0]];
+            };
+        });
+    });
+};
+
 // define the parsing function
 let parseExcel = (xlsxFile, res) => {
 
@@ -59,8 +71,11 @@ let parseExcel = (xlsxFile, res) => {
         // Print the number of rows processed for testing purposes
         console.log(`Number of items: ${jsonSheet.length}`);
 
-        // send the parsed file to database
-        product.product(jsonSheet);
+        // send the parsed file to cleaner		
+        jsonCleaner(jsonSheet);
+
+        // send the cleaned json to database
+        product(jsonSheet);
 
         // send the json as response
         res.status(200).json({ statusCode: '200(OK)', message: `Number of items: ${jsonSheet.length}` });
@@ -85,7 +100,6 @@ let uploadExcel = (req, res) => {
 
         parseExcel(req.file.path, res);
     });
-
 };
 
 module.exports = uploadExcel;
