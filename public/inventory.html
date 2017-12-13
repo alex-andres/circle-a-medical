@@ -109,71 +109,151 @@
             </div>
             <div class="col-lg-1 col-md-1"></div>
             <div class="col-lg-8 col-md-8">
-
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist">
+                <h5 id="manufactureres_title">Manufacturers</h5>
+                 <!-- Nav tabs -->
+                 <ul class="nav nav-tabs" role="tablist">
                     <li class="nav-item inventory_tab_list">
-                        <a id="one" class="nav-link active inventory_tab" data-toggle="tab" href="#home">Manufacturer Information</a>
+                        <a id="one" class="nav-link active inventory_tab" data-toggle="tab" href="#loaded">Loaded</a>
                     </li>
                     <li class="nav-item inventory_tab_list">
-                        <a id="two" class="nav-link inventory_tab" data-toggle="tab" href="#menu1">Product Information</a>
-                    </li>
-                    <li class="nav-item inventory_tab_list">
-                        <a id="three" class="nav-link inventory_tab" data-toggle="tab" href="#menu2">Units</a>
-                    </li>
+                        <a id="two" class="nav-link inventory_tab" data-toggle="tab" href="#empty">Empty</a>
+                    </li>  
                 </ul>
-
                 <!-- Tab panes -->
-                <div class="tab-content">
-                    <div id="home" class="container tab-pane active"><br>
-                        <form>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="form-group">
-                                        <label class="lables" for="manufacturer_name">Manufacturer Name</label>
-                                        <input type="text" class="form-control" id="manufacturer_name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="lables" for="category_path_name">Category Path Name</label>
-                                        <input type="text" class="form-control" id="category_path_name">
-                                    </div>
-                                    <div class="form-group" id="inventory_brows">
-                                        <input type="file" name="img[]" class="file">
-                                        <div class="input-group col-xs-12">
-                                            <span class="input-group-addon"><i class="fa fa-file-excel-o" aria-hidden="true"></i></span>
-                                            <input type="text" class="form-control input-lg" disabled placeholder="Browse File">
-
-                                            <span class="input-group-btn">
-                                        <button class="browse btn btn-default input-lg" type="button"><i class="fa fa-search" aria-hidden="true"></i> Browse
-                                        </button>
-                                    </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="form-group">
-                                        <label class="lables" for="manufacturer_number">Manufacturer Number</label>
-                                        <input type="text" class="form-control" id="manufacturer_number">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="lables" for="item_image_url">Item Image URL</label>
-                                        <input type="text" class="form-control" id="item_image_url">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="lables" for="brand_name">Brand Name</label>
-                                        <input type="text" class="form-control" id="brand_name">
-                                    </div>
-                                </div>
+                <div id="inventory_tab" class="tab-content">
+                    <div id="loaded" class="container tab-pane active"><br>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <p>McKesson (340)<br>
+                                    3M(984)<br>
+                                    Johnson (748) <br>
+                                    McKesson (340)<br>
+                                    3M(984)<br>
+                                    Johnson (748) <br>
+                                    McKesson (340)<br>
+                                    3M(984)<br>
+                                    Johnson (748)<br>
+                                    McKesson (340)<br>
+                                    3M(984)<br>
+                                    Johnson (748) <br>
+                                    McKesson (340)<br>
+                                    3M(984)<br>
+                                    Johnson (748) <br>
+                                    McKesson (340)<br>
+                                    3M(984)<br>
+                                    Johnson (748)<br>
+                                </p>
                             </div>
-                        </form>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <p>McKesson (340)<br>
+                                    3M(984)<br>
+                                    Johnson (748) <br>
+                                    McKesson (340)<br>
+                                    3M(984)<br>
+                                    Johnson (748) <br>
+                                    McKesson (340)<br>
+                                    3M(984)<br>
+                                    Johnson (748)<br>
+                                    McKesson (340)<br>
+                                    3M(984)<br>
+                                    Johnson (748) <br>
+                                    McKesson (340)<br>
+                                    3M(984)<br>
+                                    Johnson (748) <br>
+                                    McKesson (340)<br>
+                                    3M(984)<br>
+                                    Johnson (748)<br>
+                                </p>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <p>McKesson (340)<br>
+                                    3M(984)<br>
+                                    Johnson (748) <br>
+                                    McKesson (340)<br>
+                                    3M(984)<br>
+                                    Johnson (748) <br>
+                                    McKesson (340)<br>
+                                    3M(984)<br>
+                                    Johnson (748)<br>
+                                    McKesson (340)<br>
+                                    3M(984)<br>
+                                    Johnson (748) <br>
+                                    McKesson (340)<br>
+                                    3M(984)<br>
+                                    Johnson (748) <br>
+                                    McKesson (340)<br>
+                                    3M(984)<br>
+                                    Johnson (748)<br>
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div id="menu1" class="container tab-pane fade"><br>
-                        <h3>Product Information</h3>
-
-                    </div>
-                    <div id="menu2" class="container tab-pane fade"><br>
-                        <h3>Units</h3>
-
+                    <div id="empty" class="container tab-pane fade"><br>
+                       <div class="row">
+                           <div class="col-lg-4 col-md-4 col-sm-4">
+                               <p>McKesson (0)<br>
+                                    3M(0)<br>
+                                    Johnson (0) <br>
+                                    McKesson (0)<br>
+                                    3M(0)<br>
+                                    Johnson (0) <br>
+                                    McKesson (0)<br>
+                                    3M(0)<br>
+                                    Johnson (0)<br>
+                                    McKesson (0)<br>
+                                    3M(0)<br>
+                                    Johnson (0) <br>
+                                    McKesson (0)<br>
+                                    3M(0)<br>
+                                    Johnson (0) <br>
+                                    McKesson (0)<br>
+                                    3M(0)<br>
+                                    Johnson (0)<br>
+                                </p>
+                           </div>
+                           <div class="col-lg-4 col-md-4 col-sm-4">
+                               <p>McKesson (0)<br>
+                                    3M(0)<br>
+                                    Johnson (0) <br>
+                                    McKesson (0)<br>
+                                    3M(0)<br>
+                                    Johnson (0) <br>
+                                    McKesson (0)<br>
+                                    3M(0)<br>
+                                    Johnson (0)<br>
+                                    McKesson (0)<br>
+                                    3M(0)<br>
+                                    Johnson (0) <br>
+                                    McKesson (0)<br>
+                                    3M(0)<br>
+                                    Johnson (0) <br>
+                                    McKesson (0)<br>
+                                    3M(0)<br>
+                                    Johnson (0)<br>
+                                </p>
+                           </div>
+                           <div class="col-lg-4 col-md-4 col-sm-4">
+                               <p>McKesson (0)<br>
+                                    3M(0)<br>
+                                    Johnson (0) <br>
+                                    McKesson (0)<br>
+                                    3M(0)<br>
+                                    Johnson (0) <br>
+                                    McKesson (0)<br>
+                                    3M(0)<br>
+                                    Johnson (0)<br>
+                                    McKesson (0)<br>
+                                    3M(0)<br>
+                                    Johnson (0) <br>
+                                    McKesson (0)<br>
+                                    3M(0)<br>
+                                    Johnson (0) <br>
+                                    McKesson (0)<br>
+                                    3M(0)<br>
+                                    Johnson (0)<br>
+                                </p>
+                           </div>
+                       </div>
                     </div>
                 </div>
 

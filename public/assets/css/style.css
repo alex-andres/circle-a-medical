@@ -134,3 +134,10 @@ html, body {
 #inventory_category_section{
     border: 1px solid #dcdee0;
 }
+#manufactureres_title{
+    color: grey;
+    font-weight: bold;
+}
+#inventory_tab p{
+    color: grey;
+}
