@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Items/Inventory</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Items/Inventory</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -12,8 +13,9 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
+
 <body>
-    
+
     <nav class="navbar navbar-expand-lg navbar-dark pb-0 pt-0">
         <a class="navbar-brand pl-5 pr-5" href=" # ">
             <img src="./assets/img/CircleA.png " alt="Circle A Logo" height="45" width="45">
@@ -42,36 +44,36 @@
             </ul>
 
         </div>
-    </nav> 
+    </nav>
     <div class="container" id="spreadsheets-container">
 
         <div class="row">
-           <div id="spread_title" class="col-lg-9 col-md-9 col-sm-9">
-                <h3 id="items_title">Items/Inventory</h3>   
-           </div> 
-           <div class="col-lg-3 col-md-3 col-sm-3">
-               <button id="items_inventory_save_button" class="btn btn-primary btn-success">Save</button> 
-           </div>   
+            <div id="spread_title" class="col-lg-9 col-md-9 col-sm-9">
+                <h3 id="items_title">Items/Inventory</h3>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <button id="items_inventory_save_button" class="btn btn-primary btn-success">Save</button>
+            </div>
         </div>
 
-        <div class="row" >
+        <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4">
                 <h4 id="inventory_sub">Process vendor items.</h4>
             </div>
-            <div class="col-lg-8 col-md-8 col-sm-8" id="search_inventory" >
-                   <form class="form-inline">
-                      
-                        <div class="form-group mx-sm-3">
-                            <label for="searchKeyTerm" class="search_lables">Search</label>
-                            <input type="input" class="form-control" id="searchKeyTerm" placeholder="Manufacturer # or SKU">
-                        </div>
-                      <div class="form-group mx-sm-3">
-                          <label for="search_by" class="search_lables">by:</label>
-                          <select class="form-control" id="search_by">
+            <div class="col-lg-8 col-md-8 col-sm-8" id="search_inventory">
+                <form class="form-inline">
+
+                    <div class="form-group mx-sm-3">
+                        <label for="searchKeyTerm" class="search_lables">Search</label>
+                        <input type="input" class="form-control" id="searchKeyTerm" placeholder="Manufacturer # or SKU">
+                    </div>
+                    <div class="form-group mx-sm-3">
+                        <label for="search_by" class="search_lables">by:</label>
+                        <select class="form-control" id="search_by">
                             <option></option>
                           </select>
-                      </div>
-                    </form>
+                    </div>
+                </form>
             </div>
         </div>
         <div class="row" id="inventory_row1">
@@ -81,15 +83,15 @@
 
                     <ul>
                         <li>Wound care
-                           <ul>
-                               <li>Bandaids
+                            <ul>
+                                <li>Bandaids
                                     <ul>
                                         <li>Sports</li>
                                         <li>General</li>
                                     </ul>
-                               </li>
+                                </li>
 
-                           </ul>
+                            </ul>
                         </li>
                         <li>Skin care
                             <ul>
@@ -108,78 +110,78 @@
             <div class="col-lg-1 col-md-1"></div>
             <div class="col-lg-8 col-md-8">
 
-              <!-- Nav tabs -->
-              <ul class="nav nav-tabs" role="tablist">
-                <li class="nav-item inventory_tab_list">
-                  <a id="one" class="nav-link active inventory_tab" data-toggle="tab" href="#home">Manufacturer Information</a>
-                </li>
-                <li class="nav-item inventory_tab_list">
-                  <a id="two" class="nav-link inventory_tab" data-toggle="tab" href="#menu1">Product Information</a>
-                </li>
-                <li class="nav-item inventory_tab_list">
-                  <a id="three" class="nav-link inventory_tab" data-toggle="tab" href="#menu2">Units</a>
-                </li>
-              </ul>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item inventory_tab_list">
+                        <a id="one" class="nav-link active inventory_tab" data-toggle="tab" href="#home">Manufacturer Information</a>
+                    </li>
+                    <li class="nav-item inventory_tab_list">
+                        <a id="two" class="nav-link inventory_tab" data-toggle="tab" href="#menu1">Product Information</a>
+                    </li>
+                    <li class="nav-item inventory_tab_list">
+                        <a id="three" class="nav-link inventory_tab" data-toggle="tab" href="#menu2">Units</a>
+                    </li>
+                </ul>
 
-              <!-- Tab panes -->
-              <div class="tab-content">
-                <div id="home" class="container tab-pane active"><br>
-                 <form>
-                     <div class="row">
-                         <div class="col-lg-6 col-md-6">
-                             <div class="form-group">
-                                <label class="lables" for="manufacturer_name">Manufacturer Name</label>
-                                <input type="text" class="form-control" id="manufacturer_name">
-                            </div>
-                            <div class="form-group">
-                                <label class="lables" for="category_path_name">Category Path Name</label>
-                                <input type="text" class="form-control" id="category_path_name">
-                            </div>
-                            <div class="form-group" id="inventory_brows">
-                                <input type="file" name="img[]" class="file">
-                                <div class="input-group col-xs-12">
-                                    <span class="input-group-addon"><i class="fa fa-file-excel-o" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control input-lg" disabled placeholder="Browse File">
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div id="home" class="container tab-pane active"><br>
+                        <form>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <label class="lables" for="manufacturer_name">Manufacturer Name</label>
+                                        <input type="text" class="form-control" id="manufacturer_name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="lables" for="category_path_name">Category Path Name</label>
+                                        <input type="text" class="form-control" id="category_path_name">
+                                    </div>
+                                    <div class="form-group" id="inventory_brows">
+                                        <input type="file" name="img[]" class="file">
+                                        <div class="input-group col-xs-12">
+                                            <span class="input-group-addon"><i class="fa fa-file-excel-o" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control input-lg" disabled placeholder="Browse File">
 
-                                    <span class="input-group-btn">
+                                            <span class="input-group-btn">
                                         <button class="browse btn btn-default input-lg" type="button"><i class="fa fa-search" aria-hidden="true"></i> Browse
                                         </button>
-                                    </span>         
+                                    </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form-group">
+                                        <label class="lables" for="manufacturer_number">Manufacturer Number</label>
+                                        <input type="text" class="form-control" id="manufacturer_number">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="lables" for="item_image_url">Item Image URL</label>
+                                        <input type="text" class="form-control" id="item_image_url">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="lables" for="brand_name">Brand Name</label>
+                                        <input type="text" class="form-control" id="brand_name">
+                                    </div>
                                 </div>
                             </div>
-                         </div>
-                         <div class="col-lg-6 col-md-6">
-                             <div class="form-group">
-                                <label class="lables" for="manufacturer_number">Manufacturer Number</label>
-                                <input type="text" class="form-control" id="manufacturer_number">
-                            </div>
-                            <div class="form-group">
-                                <label class="lables" for="item_image_url">Item Image URL</label>
-                                <input type="text" class="form-control" id="item_image_url">
-                            </div>
-                            <div class="form-group">
-                                <label class="lables" for="brand_name">Brand Name</label>
-                                <input type="text" class="form-control" id="brand_name">
-                            </div>
-                         </div>
-                     </div>
-                 </form>
+                        </form>
+                    </div>
+                    <div id="menu1" class="container tab-pane fade"><br>
+                        <h3>Product Information</h3>
+
+                    </div>
+                    <div id="menu2" class="container tab-pane fade"><br>
+                        <h3>Units</h3>
+
+                    </div>
                 </div>
-                <div id="menu1" class="container tab-pane fade"><br>
-                  <h3>Product Information</h3>
-                  
-                </div>
-                <div id="menu2" class="container tab-pane fade"><br>
-                  <h3>Units</h3>
-                  
-                </div>
-              </div>
 
 
             </div>
 
         </div>
-            
+
     </div>
 
     </div>
@@ -190,21 +192,19 @@
     <script src='./assets/js/categories_tree.js'></script>
     <script type="text/javascript">
         //$(document).ready(function(){
-            //$("#two .active").parent().css("background-color","blue");
+        //$("#two .active").parent().css("background-color","blue");
         //});
-        $(document).on('click', '.browse', function(){
-          var file = $(this).parent().parent().parent().find('.file');
-          file.trigger('click');
-         });
-         $(document).on('change', '.file', function(){
-         $(this).parent().find('.form-control').val($(this).val().replace(/C:\\fakepath\\/i, ''));
+        $(document).on('click', '.browse', function() {
+            var file = $(this).parent().parent().parent().find('.file');
+            file.trigger('click');
+        });
+        $(document).on('change', '.file', function() {
+            $(this).parent().find('.form-control').val($(this).val().replace(/C:\\fakepath\\/i, ''));
         });
     </script>
 
 
 
 </body>
+
 </html>
-
-
-
