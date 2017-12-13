@@ -13,5 +13,5 @@ exports.signOutUser = function(req,res) {
 
 // login
 exports.loginUser = function(req, res) {
-  res.json("/");
+  res.json();
 };

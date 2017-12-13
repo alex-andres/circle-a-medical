@@ -11,10 +11,10 @@ passport.use(new LocalStrategy(
   },
   
   function(username, password, done) {
-    console.log('hi')
-    
+
     User.findOne({ 'username' :  username }, function(err, user) {
       // if there are any errors, return the error before anything else
+      console.log('hi!')
       if (err)
           return done(err);
 
