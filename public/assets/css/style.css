@@ -142,3 +142,6 @@ html, body {
 #inventory_tab p{
     color: grey;
 }
+.modal-lg {
+    max-width: 80% !important;
+}
