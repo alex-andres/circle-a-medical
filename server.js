@@ -5,7 +5,7 @@ const express = require('express');
 const app = express();
 
 const connection = require('./db/mongoose');
-const controller = require('./controllers/back-end-controller');
+const controller = require('./controllers/back_end_controller');
 
 const PORT = process.env.PORT || 3000;
 
