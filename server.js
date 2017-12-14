@@ -1,6 +1,7 @@
-const express = require('express');
 const bodyParser = require('body-parser');
-const port = process.env.PORT || 3000;
+const exphbs = require('express-handlebars');
+const express = require('express');
+
 const app = express();
 var routes = require("./routes/user")
 var passport = require("./config/passport");
@@ -23,11 +24,27 @@ app.use(authCheck);
 
 
 
+const connection = require('./db/mongoose');
+const controller = require('./controllers/back_end_controller');
+
+<<<<<<< HEAD
+=======
+const PORT = process.env.PORT || 3000;
+>>>>>>> 6cf81ef9e048f0b98f3169b4ad0ca6157ebac2d6
+
+// FIXME: implemet handlebars
+// app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+// app.set('view engine', 'handlebars');
 
 
+//Use the public folder for static files
+app.use(express.static("public", { index: 'spreadsheets.html' }));
 
-app.listen(port, function(){
-   console.log("Server running on port: " , port);
+// use bodyParser as middleware
+app.use(bodyParser.json());
 
+app.use('/', controller);
+
+app.listen(PORT, function() {
+    console.log("Server running on port: ", PORT);
 });
-
