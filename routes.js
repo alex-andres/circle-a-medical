@@ -9,7 +9,7 @@ module.exports = function(app){
             var spreadsheet = require('./routes/spreadsheet');
             var wizard = require('./routes/wizard');
     
-            app.use('/', application);
+            app.use('/', login);
             app.use('/login', login);
             app.use('/inventory_results', inventory_results);
             app.use('/inventory', inventory);
