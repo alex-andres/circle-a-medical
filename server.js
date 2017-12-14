@@ -9,7 +9,8 @@ var config = require("./config/extra-config");
 var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
-var mongoose = require('mongoose')
+var mongoose = require('mongoose');
+var flash = require('connect-flash');
 
 
 
@@ -23,6 +24,7 @@ app.use(express.static("public", { index: 'login.html'}));
 app.use(session({ secret: config.sessionKey, resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(flash());
 app.use(authCheck);
 
 app.use('/', routes);

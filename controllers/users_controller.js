@@ -1,9 +1,9 @@
 var User = require("../models/User");
 
 //this is the users_controller.js file
-// exports.authPage = function(req, res) {
-//   console.log("hi");
-// };
+exports.authPage = function(req, res) {
+  res.render('login', { user: req.username, message : req.flash('error') })
+};
 
 exports.signOutUser = function(req, res) {
   req.logout();
