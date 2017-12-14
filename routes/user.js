@@ -6,7 +6,9 @@ var users_controller = require('../controllers/users_controller');
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 
-router.get('/login', users_controller.authPage);
+var login_controller = require("../controllers/login_controller");
+
+router.get("/", login_controller.index);
 
 router.get('/sign-out', users_controller.signOutUser);
 

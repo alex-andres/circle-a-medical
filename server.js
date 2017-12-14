@@ -1,21 +1,23 @@
-const express = require('express');
 const bodyParser = require('body-parser');
-const port = process.env.PORT || 3000;
+const exphbs = require('express-handlebars');
+const express = require('express');
+
 const app = express();
-var routes = require("./routes/user");
-var passport = require("./config/passport");
-var session = require('express-session');
-var config = require("./config/extra-config");
-var path = require('path');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var mongoose = require('mongoose');
-var flash = require('connect-flash');
+const passport = require("./config/passport");
+const session = require('express-session');
+const config = require("./config/extra-config");
+const path = require('path');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const mongoose = require('mongoose');
+const flash = require('connect-flash');
 
 
 
-var isAuth = require("./config/middleware/isAuthenticated");
-var authCheck = require('./config/middleware/attachAuthenticationStatus');
+const isAuth = require("./config/middleware/isAuthenticated");
+const authCheck = require('./config/middleware/attachAuthenticationStatus');
+
+
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
@@ -27,15 +29,18 @@ app.use(passport.session());
 app.use(flash());
 app.use(authCheck);
 
-app.use('/', routes);
+require('./routes')(app);
 
-var configDB = require('./config/database');
+const configDB = require('./config/database');
 mongoose.connect(configDB.url);
 
-var db = mongoose.connection;
+const PORT = process.env.PORT || 3000;
 
-app.listen(port, function(){
-   console.log("Server running on port: " , port);
+// FIXME: implemet handlebars
+// app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+// app.set('view engine', 'handlebars');
 
+
+app.listen(PORT, function() {
+    console.log("Server running on port: ", PORT);
 });
-
