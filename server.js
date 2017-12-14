@@ -20,11 +20,12 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 app.use(express.static("public", { index: 'login.html'}));
-app.use('/', routes);
 app.use(session({ secret: config.sessionKey, resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(authCheck);
+
+app.use('/', routes);
 
 var configDB = require('./config/database');
 mongoose.connect(configDB.url);

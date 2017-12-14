@@ -14,11 +14,6 @@ var userSchema = mongoose.Schema({
         max: 100,
         required: [true, 'Please enter a username.']
     },
-    email: {
-        type: String,
-        min: [3, 'Please enter an email in the correct format'],
-        required: [true, 'Please enter an email']
-    },
     password: {
         type: String,
         min: [8, 'Your password must be at least 8 characters large'],
