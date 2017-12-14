@@ -3,6 +3,6 @@ var router = express.Router();
 
 var inventory_search_results_controller = require("../controllers/inventory_search_results_controller");
 
-router.get("/", inventory_search_results_controller.index);
+router.get("/inventory_search_results", inventory_search_results_controller.index);
 
 module.exports = router;
