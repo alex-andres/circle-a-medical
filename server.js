@@ -10,9 +10,6 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const flash = require('connect-flash');
-
-
-
 const isAuth = require("./config/middleware/isAuthenticated");
 const authCheck = require('./config/middleware/attachAuthenticationStatus');
 
@@ -25,10 +22,15 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine', 'handlebars');
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// uncomment this line for testing
+// app.use(express.static(path.join(__dirname, "public"), { index: 'spreadsheets.html' }));
+
+// comment out this line instead for testing
 app.use(express.static(path.join(__dirname, "public")));
+
 app.use(session({ secret: config.sessionKey, resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
