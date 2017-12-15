@@ -3,14 +3,16 @@ const moment = require('moment');
 
 // TODO: Make this a separate module
 // function to remove fields with empty strings as value
-let dataProcessor = (data, req) => {
-    let fileName = req.file.filename;
-    let xlsxPath = req.file.path;
-    let jsonPath = `${xlsxPath}.json`;
-    let creationTime = moment().format('MM-DD-YYYY hh:mm:ss Z');
+const dataProcessor = (data, req) => {
+
+    const fileName = req.file.filename;
+    const xlsxPath = req.file.path;
+    const jsonPath = `${xlsxPath}.json`;
+    const creationTime = moment().format('MM-DD-YYYY hh:mm:ss Z');
     let arrCategories = [];
     let arrUnits = [];
     let arrAttributes = [];
+
     data.map(obj => {
         const objEnt = Object.entries(obj);
         objEnt.map(val => {
@@ -19,6 +21,12 @@ let dataProcessor = (data, req) => {
                 delete obj[val[0]];
             } else
             if (val[0] === 'CategoryPathName' || /^([^|]*)(\|).*$/.test(val[1])) {
+                val[1] = val[1].split('|');
+                val[1].map((str, i) => {
+                    str = str.trim();
+                    val[1][i] = str;
+                });
+                val[1] = val[1].join('|');
                 if (arrCategories.indexOf(val[1]) === -1) {
                     arrCategories.push(val[1]);
                 };
@@ -34,7 +42,8 @@ let dataProcessor = (data, req) => {
             };
         });
     });
-    let objDB = {
+
+    const objDB = {
         fileName,
         xlsxPath,
         jsonPath,
@@ -44,6 +53,7 @@ let dataProcessor = (data, req) => {
         attributes: arrAttributes,
         isProcessed: false
     };
+
     uploadToDB(objDB);
 };
 
