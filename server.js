@@ -20,10 +20,13 @@ app.set("views", path.join(__dirname, "views"));
 app.engine('handlebars', exphbs({
     defaultLayout: 'main',
     helpers: {
-        section: function(name, options) {
-            if (!this._sections) this._sections = {};
-            this._sections[name] = options.fn(this);
+        spreadsheet: function(name, options) {
+            if (!this._spreadsheets) this._spreadsheets = {};
+            this._spreadsheets[name] = options.fn(this);
             return null;
+        },
+        fileIndex: function(value, options) {
+            return parseInt(value) + 1;
         }
     }
 }));

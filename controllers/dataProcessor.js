@@ -56,7 +56,7 @@ const dataProcessor = (data, req) => {
         isProcessed: false
     };
 
-    uploadToDB(objDB);
+    uploadToDB.uploadsDB(objDB);
 };
 
 module.exports = dataProcessor;

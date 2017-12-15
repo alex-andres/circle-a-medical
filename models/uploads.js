@@ -27,17 +27,9 @@ const uploadsDB = obj => {
     uploadModel.create(obj);
 };
 
-uploadedFiles = (callback) => {
-    uploadModel.find({}).then(res => {
-        // if (err) {
-        //     console.log('error', err);
-        // };
-        console.log('success');
-        callback(res);
-    });
-};
+let uploadedFiles = uploadModel.find({});
 
 module.exports = {
     uploadsDB,
-    uploadModel
+    uploadedFiles
 };
