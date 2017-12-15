@@ -13,6 +13,8 @@ const flash = require('connect-flash');
 const isAuth = require("./config/middleware/isAuthenticated");
 const authCheck = require('./config/middleware/attachAuthenticationStatus');
 
+mongoose.Promise = global.Promise;
+
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 
