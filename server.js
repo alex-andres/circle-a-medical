@@ -30,6 +30,7 @@ app.engine('handlebars', exphbs({
         }
     }
 }));
+
 app.set('view engine', 'handlebars');
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -46,7 +47,7 @@ app.use(authCheck);
 require('./routes')(app);
 
 const configDB = require('./config/database');
-mongoose.connect(configDB.url);
+mongoose.connect(configDB.url, { useMongoClient: true });
 
 const PORT = process.env.PORT || 3000;
 
