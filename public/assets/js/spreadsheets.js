@@ -1,5 +1,13 @@
 $(function() {
 
+    let tableArr = [];
+
+    $.ajax('/spreadsheets/uploadedFiles', {
+        type: 'GET',
+    }).then(res => {
+        console.log(res);
+    });
+
     $('#excelForm').submit((event) => {
 
         event.preventDefault();
@@ -21,7 +29,5 @@ $(function() {
             },
             crossDomain: true
         });
-
     });
-
 });

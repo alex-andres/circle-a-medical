@@ -4,6 +4,7 @@ const uploadSchema = new mongoose.Schema({
     fileName: String,
     xlsxPath: String,
     jsonPath: String,
+    recordsCount: Number,
     creationTime: String,
     categories: {
         type: Array,
@@ -20,10 +21,23 @@ const uploadSchema = new mongoose.Schema({
     isProcessed: Boolean
 });
 
-const newUpload = mongoose.model('Upload', uploadSchema);
+const uploadModel = mongoose.model('Upload', uploadSchema);
 
 const uploadsDB = obj => {
-    newUpload.create(obj);
+    uploadModel.create(obj);
 };
 
-module.exports = uploadsDB;
+uploadedFiles = (callback) => {
+    uploadModel.find({}).then(res => {
+        // if (err) {
+        //     console.log('error', err);
+        // };
+        console.log('success');
+        callback(res);
+    });
+};
+
+module.exports = {
+    uploadsDB,
+    uploadModel
+};

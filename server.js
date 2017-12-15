@@ -18,17 +18,20 @@ app.set("views", path.join(__dirname, "views"));
 
 //set up handlebars
 app.engine('handlebars', exphbs({
-    defaultLayout: 'main'
+    defaultLayout: 'main',
+    helpers: {
+        section: function(name, options) {
+            if (!this._sections) this._sections = {};
+            this._sections[name] = options.fn(this);
+            return null;
+        }
+    }
 }));
 app.set('view engine', 'handlebars');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// uncomment this line for testing
-// app.use(express.static(path.join(__dirname, "public"), { index: 'spreadsheets.html' }));
-
-// comment out this line instead for testing
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use(session({ secret: config.sessionKey, resave: true, saveUninitialized: true }));

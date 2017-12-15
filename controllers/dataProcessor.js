@@ -8,6 +8,7 @@ const dataProcessor = (data, req) => {
     const fileName = req.file.filename;
     const xlsxPath = req.file.path;
     const jsonPath = `${xlsxPath}.json`;
+    const recordsCount = data.length;
     const creationTime = moment().format('MM-DD-YYYY hh:mm:ss Z');
     let arrCategories = [];
     let arrUnits = [];
@@ -47,6 +48,7 @@ const dataProcessor = (data, req) => {
         fileName,
         xlsxPath,
         jsonPath,
+        recordsCount,
         creationTime,
         categories: arrCategories,
         units: arrUnits,
