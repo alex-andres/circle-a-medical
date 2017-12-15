@@ -6,7 +6,7 @@ module.exports = function(app){
             var inventory_results = require('./routes/inventory_search_results');
             var inventory = require('./routes/inventory');
             var settings = require('./routes/settings');
-            var spreadsheet = require('./routes/spreadsheet');
+            var spreadsheets = require('./routes/spreadsheets');
             var wizard = require('./routes/wizard');
     
             app.use('/', login);
@@ -14,6 +14,6 @@ module.exports = function(app){
             app.use('/inventory_results', inventory_results);
             app.use('/inventory', inventory);
             app.use('/settings', settings);
-            app.use('/spreadsheet', spreadsheet);
+            app.use('/spreadsheets', spreadsheets);
             app.use('/wizard', wizard);
     }

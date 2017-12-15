@@ -1,10 +1,13 @@
 $(document).ready(function() {
   $("#loginSubmit").on("click", function(event) {
     event.preventDefault();
+      var usernameInput = $('#userName');
+      var passwordInput = $('#pwd');
+    
 
       var userData = {
-        username: $('#userName').val().trim(),
-        password: $('#pwd').val().trim()
+        username: $(usernameInput).val().trim(),
+        password: $(passwordInput).val().trim()
       };
 
       if (!userData.username || !userData.password) {
