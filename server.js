@@ -19,19 +19,44 @@ mongoose.Promise = global.Promise;
 app.set("views", path.join(__dirname, "views"));
 
 //set up handlebars
-app.engine('handlebars', exphbs({
-    defaultLayout: 'main',
+app.engine(
+  "handlebars",
+  exphbs({
+    defaultLayout: "main",
     helpers: {
-        spreadsheet: function(name, options) {
-            if (!this._spreadsheets) this._spreadsheets = {};
-            this._spreadsheets[name] = options.fn(this);
-            return null;
-        },
-        fileIndex: function(value, options) {
-            return parseInt(value) + 1;
-        }
+      inventory: function(name, options) {
+        if (!this._inventory) this._inventory = {};
+        this._inventory[name] = options.fn(this);
+        return null;
+      },
+      inventory_search_results: function(name, options) {
+        if (!this._inventory_search_results)
+          this._inventory_search_results = {};
+        this._inventory_search_results[name] = options.fn(this);
+        return null;
+      },
+      logins: function(name, options) {
+        if (!this.logins)
+          this.logins = {};
+        this.logins[name] = options.fn(this);
+        return null;
+      },
+      spreadsheet: function(name, options) {
+        if (!this._spreadsheets) this._spreadsheets = {};
+        this._spreadsheets[name] = options.fn(this);
+        return null;
+      },
+      wizard: function(name, options) {
+        if (!this._wizard) this._wizard = {};
+        this._wizard[name] = options.fn(this);
+        return null;
+      },
+      fileIndex: function(value, options) {
+        return parseInt(value) + 1;
+      }
     }
-}));
+  })
+);
 
 app.set('view engine', 'handlebars');
 
