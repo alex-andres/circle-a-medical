@@ -37,8 +37,8 @@ app.use(authCheck);
 
 require('./routes')(app);
 
-//const configDB = require('./config/database');
-//mongoose.connect(configDB.url);
+const configDB = require('./config/database');
+mongoose.connect(configDB.url);
 
 const PORT = process.env.PORT || 3000;
 
