@@ -23,8 +23,8 @@ const uploadSchema = new mongoose.Schema({
 
 const uploadModel = mongoose.model('Upload', uploadSchema);
 
-const uploadsDB = obj => {
-    uploadModel.create(obj);
+const uploadsDB = (obj, cb) => {
+    uploadModel.create(obj, cb);
 };
 
 const uploadedFiles = uploadModel.find({});

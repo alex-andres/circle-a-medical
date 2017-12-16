@@ -13,49 +13,52 @@ const flash = require('connect-flash');
 const isAuth = require("./config/middleware/isAuthenticated");
 const authCheck = require('./config/middleware/attachAuthenticationStatus');
 
+// config database
+const configDB = require('./config/database');
 mongoose.Promise = global.Promise;
+mongoose.connect(configDB.url, { useMongoClient: true });
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 
 //set up handlebars
 app.engine(
-  "handlebars",
-  exphbs({
-    defaultLayout: "main",
-    helpers: {
-      inventory: function(name, options) {
-        if (!this._inventory) this._inventory = {};
-        this._inventory[name] = options.fn(this);
-        return null;
-      },
-      inventory_search_results: function(name, options) {
-        if (!this._inventory_search_results)
-          this._inventory_search_results = {};
-        this._inventory_search_results[name] = options.fn(this);
-        return null;
-      },
-      logins: function(name, options) {
-        if (!this._logins)
-          this._logins = {};
-        this._logins[name] = options.fn(this);
-        return null;
-      },
-      spreadsheet: function(name, options) {
-        if (!this._spreadsheets) this._spreadsheets = {};
-        this._spreadsheets[name] = options.fn(this);
-        return null;
-      },
-      wizard: function(name, options) {
-        if (!this._wizard) this._wizard = {};
-        this._wizard[name] = options.fn(this);
-        return null;
-      },
-      fileIndex: function(value, options) {
-        return parseInt(value) + 1;
-      }
-    }
-  })
+    "handlebars",
+    exphbs({
+        defaultLayout: "main",
+        helpers: {
+            inventory: function(name, options) {
+                if (!this._inventory) this._inventory = {};
+                this._inventory[name] = options.fn(this);
+                return null;
+            },
+            inventory_search_results: function(name, options) {
+                if (!this._inventory_search_results)
+                    this._inventory_search_results = {};
+                this._inventory_search_results[name] = options.fn(this);
+                return null;
+            },
+            logins: function(name, options) {
+                if (!this._logins)
+                    this._logins = {};
+                this._logins[name] = options.fn(this);
+                return null;
+            },
+            spreadsheet: function(name, options) {
+                if (!this._spreadsheets) this._spreadsheets = {};
+                this._spreadsheets[name] = options.fn(this);
+                return null;
+            },
+            wizard: function(name, options) {
+                if (!this._wizard) this._wizard = {};
+                this._wizard[name] = options.fn(this);
+                return null;
+            },
+            fileIndex: function(value, options) {
+                return parseInt(value) + 1;
+            }
+        }
+    })
 );
 
 app.set('view engine', 'handlebars');
@@ -72,9 +75,6 @@ app.use(flash());
 app.use(authCheck);
 
 require('./routes')(app);
-
-const configDB = require('./config/database');
-mongoose.connect(configDB.url, { useMongoClient: true });
 
 const PORT = process.env.PORT || 3000;
 

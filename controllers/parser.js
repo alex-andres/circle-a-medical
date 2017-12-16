@@ -26,15 +26,11 @@ const parseExcel = (req, res) => {
         console.log(`Number of items: ${jsonSheet.length}`);
 
         // send the parsed file to cleaner		
-        dataProcessor(jsonSheet, req);
+        dataProcessor(jsonSheet, req, res);
 
         // TODO: this was only for testing
         // send the cleaned json to database
         // product(jsonSheet);
-
-        // send the json as response
-        res.status(200).json({ statusCode: '200(OK)', message: `Number of items: ${jsonSheet.length}` });
-
     });
 };
 
