@@ -34,5 +34,6 @@ const deleteFile = fileName => uploadModel.find({ fileName }).remove();
 module.exports = {
     uploadsDB,
     uploadedFiles,
-    deleteFile
+    deleteFile,
+    uploadModel
 };
