@@ -128,6 +128,9 @@ html, body {
 }
 #categories_tree{
     color: grey;
+    font-size: 150%;
+    padding-bottom: 50px;
+    
 }
 #inventory_category_section{
     border: 1px solid #dcdee0;
@@ -142,4 +145,7 @@ html, body {
 }
 .modal-lg {
     max-width: 80% !important;
+}
+#tree_data{
+    padding-top: 15px;
 }
