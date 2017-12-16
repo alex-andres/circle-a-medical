@@ -23,6 +23,16 @@ $(function() {
         });
     });
 
+    $(".deleteBtn").click(function() {
+        $.ajax({
+            type: 'PUT',
+            url: '/delete/' + $(this).attr('data-fileName'),
+            success: function() {
+                location.reload();
+            }
+        })
+    });
+
     $('#modal-btn').click(() => {
         location.reload();
     });

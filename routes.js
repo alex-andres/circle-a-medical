@@ -18,4 +18,5 @@ module.exports = function(app) {
     app.use('/wizard', wizard);
     app.use('/download', application);
     app.use('/upload', application);
+    app.use('/delete', application);
 }

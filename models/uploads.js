@@ -27,9 +27,12 @@ const uploadsDB = obj => {
     uploadModel.create(obj);
 };
 
-let uploadedFiles = uploadModel.find({});
+const uploadedFiles = uploadModel.find({});
+
+const deleteFile = fileName => uploadModel.find({ fileName }).remove();
 
 module.exports = {
     uploadsDB,
-    uploadedFiles
+    uploadedFiles,
+    deleteFile
 };

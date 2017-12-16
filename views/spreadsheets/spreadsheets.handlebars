@@ -64,7 +64,7 @@
 					<td class="text-center"><button class="btn btn-outline-primary processBtn"  data-jsonPath="{{jsonPath}}"><i class="fas fa-server"></i></button></td>
 					<td class="text-center"><a href="/download/json/{{fileName}}.json" target="_blank"><button class="btn btn-outline-primary"><i class="fas fa-file"></i></button></a></td>
 					<td class="text-center"><a href="/download/xlsx/{{fileName}}" target="_blank"><button class="btn btn-outline-primary"><i class="fas fa-download"></i></button></a></td>
-					<td class="text-center"><button class="btn btn-outline-primary deleteBtn" data-fileIndex="{{@index}}"><i class="fas fa-trash-alt"></i></button></td>
+					<td class="text-center"><button class="btn btn-outline-primary deleteBtn" data-fileName="{{fileName}}"><i class="fas fa-trash-alt"></i></button></td>
 				</tr>
 			{{/each}}
         </tbody>
