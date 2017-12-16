@@ -12,7 +12,7 @@ exports.signOutUser = function(req, res) {
 
 // login
 exports.loginUser = function(req, res) {
-  res.redirect('/inventory');
+  res.json('/inventory');
 };
 
 exports.signUpUser = function(req, res) {
