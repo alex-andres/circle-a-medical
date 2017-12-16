@@ -56,7 +56,8 @@ const dataProcessor = (data, req, res) => {
         isProcessed: false
     };
 
-    let cb = () => {
+    let cb = (error) => {
+        if (error) return console.log(err);
         // send the json as response
         res.status(200).json({ statusCode: '200(OK)', message: `Number of items: ${data.length}` });
     };
