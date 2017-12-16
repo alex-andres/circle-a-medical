@@ -16,5 +16,7 @@ module.exports = function(app) {
     app.use('/settings', settings);
     app.use('/spreadsheets', spreadsheets);
     app.use('/wizard', wizard);
+    app.use('/download', application);
     app.use('/upload', application);
+    app.use('/delete', application);
 }
