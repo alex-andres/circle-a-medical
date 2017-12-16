@@ -10,25 +10,36 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const flash = require('connect-flash');
-
-
-
 const isAuth = require("./config/middleware/isAuthenticated");
 const authCheck = require('./config/middleware/attachAuthenticationStatus');
+
+mongoose.Promise = global.Promise;
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 
 //set up handlebars
 app.engine('handlebars', exphbs({
-    defaultLayout: 'main'
+    defaultLayout: 'main',
+    helpers: {
+        spreadsheet: function(name, options) {
+            if (!this._spreadsheets) this._spreadsheets = {};
+            this._spreadsheets[name] = options.fn(this);
+            return null;
+        },
+        fileIndex: function(value, options) {
+            return parseInt(value) + 1;
+        }
+    }
 }));
+
 app.set('view engine', 'handlebars');
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, "public")));
+
 app.use(session({ secret: config.sessionKey, resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -38,7 +49,7 @@ app.use(authCheck);
 require('./routes')(app);
 
 const configDB = require('./config/database');
-mongoose.connect(configDB.url);
+mongoose.connect(configDB.url, { useMongoClient: true });
 
 const PORT = process.env.PORT || 3000;
 
