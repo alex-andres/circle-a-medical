@@ -3,6 +3,6 @@ var router = express.Router();
 
 var spreadsheets_controller = require("../controllers/spreadsheets_controller");
 
-router.get("/", spreadsheets_controller.index);
+router.get('/', spreadsheets_controller.index);
 
 module.exports = router;
