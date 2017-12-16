@@ -4,9 +4,10 @@ const { uploadModel } = require('../models/uploads');
 const catModel = require('../models/categories');
 const attrModel = require('../models/attributes');
 
-let processCategories = (fileName) => new Promise((resolve, reject) => {
+let processCategories = (fileName, cb) => {
     uploadModel.findOne({ fileName }, 'categories', (error, result) => {
         if (error) return console.log(error);
+        console.log(result);
         if (result.categories !== []) {
             let catNumber = result.categories;
             result.categories.map((category) => {
@@ -30,14 +31,16 @@ let processCategories = (fileName) => new Promise((resolve, reject) => {
                 });
             });
         };
+        cb(result.categories);
     });
-    resolve(catNumber);
-});
+};
 
 let processAttributes = (fileName, cb) => {
+    console.log(fileName);
     uploadModel.findOne({ fileName }, 'attributes', (error, result) => {
         if (error) return console.log(error);
         if (result.attributes !== []) {
+            console.log(result);
             cb(result.attributes);
         };
     });

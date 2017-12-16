@@ -38,8 +38,10 @@
                         </thead>
                         <tbody>
                             <tr>
+								{{#each attributes}}
                                 <th scope="row">{{attributes}}</th>
                                 <td contenteditable="true">{{attributes}}</td>
+								{{/each}}
                                 <td contenteditable="true">{{fileName}}</td>
                                 <td contenteditable="true">{{date}}</td>
                             </tr>

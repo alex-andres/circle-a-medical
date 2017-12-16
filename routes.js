@@ -19,4 +19,4 @@ module.exports = function(app) {
     app.use('/download', application);
     app.use('/upload', application);
     app.use('/delete', application);
-}
+};
