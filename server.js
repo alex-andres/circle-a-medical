@@ -36,9 +36,9 @@ app.engine(
         return null;
       },
       logins: function(name, options) {
-        if (!this.logins)
-          this.logins = {};
-        this.logins[name] = options.fn(this);
+        if (!this._logins)
+          this._logins = {};
+        this._logins[name] = options.fn(this);
         return null;
       },
       spreadsheet: function(name, options) {
