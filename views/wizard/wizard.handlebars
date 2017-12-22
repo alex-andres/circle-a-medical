@@ -1,12 +1,13 @@
  {{#wizard 'head'}}
-    <link rel="stylesheet" href="./assets/css/steps/normalize.css">
-    <link rel="stylesheet" href="./assets/css/steps/main.css">
-    <link rel="stylesheet" href="./assets/css/steps/jquery.steps.css">
+    <link rel="stylesheet" href="../assets/css/steps/normalize.css">
+    <link rel="stylesheet" href="../assets/css/steps/main.css">
+    <link rel="stylesheet" href="../assets/css/steps/jquery.steps.css">
+	<link rel="stylesheet" href="../assets/css/style.css">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.js' defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.1/bootstrap-editable/js/bootstrap-editable.min.js" defer></script>
-    <script src='./assets/js/import.js' defer></script>
-    <script src="./assets/js/main.js" defer></script>
-    <script src="./assets/js/wizard.js" defer></script>
+    <script src='../assets/js/import.js' defer></script>
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/wizard.js" defer></script>
  {{/wizard}}
 
  {{> nav }}
@@ -30,31 +31,22 @@
                     <table class="table table-striped">
                         <thead class="primary">
                             <tr>
-                                <th scope="col">Title/Alias</th>
-                                <th scope="col">Alias to</th>
-                                <th scope="col">Sheets</th>
-                                <th scope="col">Import</th>
+                                <th scope="col">Database Field</th>
+                                <th scope="col">Mapped Attributes</th>
+                                <th scope="col">File Name</th>
+                                <th scope="col">Timestamp</th>
                             </tr>
                         </thead>
                         <tbody>
+							{{#each attributes}}
                             <tr>
-                                <th scope="row">Availability</th>
-                                <td>Availability</td>
-                                <td>Sheet 1</td>
-                                <td><span class="glyphicons glyphicons-disk-import"></span></td>
+                                <th scope="row">{{attr}}</th>
+                                <td contenteditable="true">{{attr}}</td>
+                                <td contenteditable="true">{{fileName}}</td>
+                                <td contenteditable="true">{{dateStr}}</td>
+								
                             </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Brand</td>
-                                <td>BrandID</td>
-                                <td><span class="glyphicons glyphicons-disk-import"></span></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
+							{{/each}}
                         </tbody>
                     </table>
                 </section>

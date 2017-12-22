@@ -3,7 +3,7 @@ const moment = require('moment');
 
 // TODO: Make this a separate module
 // function to remove fields with empty strings as value
-const dataProcessor = (data, req) => {
+const dataProcessor = (data, req, res) => {
 
     const fileName = req.file.filename;
     const xlsxPath = req.file.path;
@@ -56,7 +56,15 @@ const dataProcessor = (data, req) => {
         isProcessed: false
     };
 
-    uploadToDB.uploadsDB(objDB);
+    let cb = (error) => {
+        if (error) return console.log(err);
+        // send the json as response
+        res.status(200).json({ statusCode: '200(OK)', message: `Number of items: ${data.length}` });
+    };
+
+    uploadToDB.uploadsDB(objDB, cb);
+    // send the json as response
+    // res.status(200).json({ statusCode: '200(OK)', message: `Number of items: ${jsonSheet.length}` });
 };
 
 module.exports = dataProcessor;

@@ -33,6 +33,14 @@ $(function() {
         })
     });
 
+    $(".processBtn").click(function() {
+        $.ajax({
+            type: 'GET',
+            url: '/wizard/' + $(this).attr('data-fileName'),
+            success: function(res) {}
+        })
+    });
+
     $('#modal-btn').click(() => {
         location.reload();
     });

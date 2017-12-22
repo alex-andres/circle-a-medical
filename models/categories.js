@@ -1,10 +1,15 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-var newSchema = new mongoose.Schema({}, { strict: false });
-var newCategory = mongoose.model('Category', newSchema);
+const catSchema = new mongoose.Schema({
+    name: String,
+    parent: String,
+    path: {
+        type: String,
+        index: true,
+        unique: true
+    }
+});
 
-var categories = function(obj) {
-    newProduct.create(obj);
-};
+const catModel = mongoose.model('Cat', catSchema);
 
-module.exports = categories;
+module.exports = catModel;
